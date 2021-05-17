@@ -1,9 +1,5 @@
 {
-  "protected_resources": {
-    "users": ["GET", "POST", "PUT", "PATCH", "DELETE"],
-    "products": ["POST", "PUT", "PATCH", "DELETE"]
-  },
-  "users": [
+   "users": [
     {
       "id": 1,
       "name": "Administrator",
