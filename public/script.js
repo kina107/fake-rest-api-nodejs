@@ -17,7 +17,7 @@ $(function () {
   function getData() {
     $.ajax({
       method: 'GET',
-      url: 'http://localhost:3000/users',
+      url: 'https://ffake-rest-api-nodejs.herokuapp.com/users',
       success: function (users) {
         $.each(users, function (i, user) {
           tbRow.after(`
@@ -80,7 +80,7 @@ $(function () {
     } else {
       $.ajax({
         method: 'POST',
-        url: 'http://localhost:3000/users',
+        url: 'https://ffake-rest-api-nodejs.herokuapp.com/users',
         data: user,
         success: function (newUser) {
           tbRow.after(`
@@ -103,7 +103,7 @@ $(function () {
   // Delete user
   function deleteUser(id) {
     $.ajax({
-      url: 'http://localhost:3000/users/' + id,
+      url: 'https://ffake-rest-api-nodejs.herokuapp.com/users/' + id,
       method: 'DELETE',
       dataType: 'json',
       success: function (data) {
@@ -116,7 +116,7 @@ $(function () {
   // Edit user
   function getUserInfo(id) {
     $.ajax({
-      url: 'http://localhost:3000/users/' + id,
+      url: 'https://ffake-rest-api-nodejs.herokuapp.com/users/' + id,
       method: 'GET',
       success: function (data) {
         $('#fname').val(data.firstName);
