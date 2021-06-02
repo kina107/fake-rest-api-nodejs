@@ -44,12 +44,12 @@ $(function () {
     $('.edit').on('click', function (e) {
       $('.edit-form').removeClass('hide');
       $('.main').addClass('hide');
-      getUserInfo($($(this)[0]).data('id'));
-      updateUser($($(this)[0]).data('id'));
+      getUserInfo($(this).data('id'));
+      updateUser($(this).data('id'));
       e.preventDefault();
     })
     $('.remove').on('click', function (e) {
-      deleteUser($($(this)[0]).data('id'));
+      deleteUser($(this).data('id'));
       e.preventDefault();
     })
   }
@@ -134,7 +134,7 @@ $(function () {
     $('#editBtn').on('click', function (e) {
       e.preventDefault();
       $.ajax({
-        url: 'http://localhost:3000/users/' + id,
+        url: 'https://ffake-rest-api-nodejs.herokuapp.com/users/' + id,
         method: 'PUT',
         data: {
           firstName: $('#fname').val(),
